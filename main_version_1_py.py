@@ -140,7 +140,7 @@ async def process_video(file: UploadFile = File(...)):
         image_to_send.save(buffered, format="JPEG")
         buffered.seek(0)
 
-        url = 'http://example.com/api/upload'
+        url = 'http://localhost:80/api/web'
         data = {'json_data': final_response}
         files = {'image': ('image.jpg', buffered, 'image/jpeg')}
 
